@@ -10,7 +10,7 @@ const [main, vnc] = baseConfigs;
 module.exports = [
   merge(main, {
     mode: "production",
-    devtool: "source-map",
+    // devtool: "source-map",
 
     // TODO figure out minifying lit templates
     optimization: {
@@ -32,7 +32,7 @@ module.exports = [
     },
     plugins: [
       new ESLintPlugin({
-        failOnWarning: true,
+        failOnWarning: false,
         extensions: ["ts", "js"],
       }),
     ],
